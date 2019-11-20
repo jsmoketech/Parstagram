@@ -38,14 +38,25 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let post = posts[section]
+        let comments = (post["comments"] as? [PFObject]) ?? []
+        
+        return comments.count + 1
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return posts.count
     }
+    
+    
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let post = posts[indexPath.row]
+        let comments = (post["comments"] as? [PFObject]) ?? []
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell")
             as! PostCell
-        let post = posts[indexPath.row]
+        
         let user = post["author"] as! PFUser
         cell.usernameLabel.text = user.username
         
@@ -80,6 +91,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         delegate.window?.rootViewController = loginViewController
     }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let post = posts[indexPath.row]
