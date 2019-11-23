@@ -22,7 +22,7 @@ The following **bonus** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/jsmoketech/Parstagram/blob/master/instagram.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 # Parstagram - Part I
 
@@ -45,7 +45,4 @@ The following **bonus** features are implemented:
 - [ ] User can pull to refresh. (1pt)
 - [ ] User can load past tweets infinitely. (2pts)
 
-## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
-<img src='https://github.com/jsmoketech/Parstagram/blob/master/instagram.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
